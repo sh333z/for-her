@@ -24,16 +24,19 @@
     font-weight: 600;
 }
 
-/* GLASS INPUTS */
+/* CLEAR GLASS INPUTS */
 #opening input {
     width: 85%;
-    max-width: 382px;
+    max-width: 320px;
     padding: 14px;
-    margin: 10px 0;
+    margin: 6px 0;
     border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.35);
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(10px);
+
+    background: rgba(255, 255, 255, 0.12); /* MORE CLEAR */
+    backdrop-filter: blur(6px);            /* LESS BLUR */
+    -webkit-backdrop-filter: blur(6px);
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
     color: white;
     font-size: 15px;
     outline: none;
