@@ -151,3 +151,28 @@
         width: 90%;
     }
 }
+/* MAKE OPENING CONTENT CLOSER */
+#opening h1 {
+    margin-bottom: 12px;   /* was too big */
+}
+
+#opening p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+#opening input {
+    margin: 6px 0;         /* reduce vertical gap */
+}
+
+.hint {
+    margin-top: 6px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+#opening button {
+    margin-top: 12px;
+    padding: 10px 26px;
+}
