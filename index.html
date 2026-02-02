@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For My Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- OPENING SCREEN -->
+    <div id="opening">
+        <h1>❤️ For Someone Very Special ❤️</h1>
+        <p>You are about to enter my heart</p>
+        <button onclick="openLove()">Tap to Open 💖</button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main" class="container hidden">
+
+        <h1>❤️ My Love ❤️</h1>
+        <p class="subtitle">This is only for you</p>
+
+        <section class="card">
+            <h2>💌 A Small Message</h2>
+            <p>
+                From the moment you came into my life,  
+                everything became more beautiful.  
+                This little website is just to remind you  
+                how special you are to me.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>📖 Our Memories</h2>
+            <ul>
+                <li>The first time we talked 💬</li>
+                <li>Our first meet 😍</li>
+                <li>Every smile you gave me 😊</li>
+                <li>Every moment I felt lucky 🫶</li>
+            </ul>
+        </section>
+
+        <section class="card final">
+            <h2>✨ Forever</h2>
+            <p>
+                No matter where life takes us,  
+                you will always have my heart. ❤️
+            </p>
+            <p class="sign">— Yours Always</p>
+        </section>
+
+    </div>
+
+    <script>
+        function openLove() {
+            document.getElementById("opening").classList.add("fade");
+            setTimeout(() => {
+                document.getElementById("opening").style.display = "none";
+                document.getElementById("main").classList.remove("hidden");
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
