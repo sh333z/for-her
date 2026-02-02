@@ -1,70 +1,99 @@
 /* OPENING SCREEN */
 #opening {
     position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    inset: 0;
+    background:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("bg.jpg");
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
     transition: opacity 1s ease;
 }
 
+/* TITLE */
 #opening h1 {
     color: white;
-    font-size: 2.2em;
-    margin-bottom: 10px;
+    font-size: 2em;
+    margin-bottom: 25px;
+    font-weight: 600;
 }
 
-#opening p {
-    color: white;
-    margin-bottom: 30px;
-}
-
-#opening button {
-    padding: 12px 25px;
-    font-size: 16px;
-    border: none;
-    border-radius: 30px;
-    background: white;
-    color: #ff4081;
-    cursor: pointer;
-}
-
-#opening button:hover {
-    transform: scale(1.05);
-}
-
-/* Fade Effect */
-.fade {
-    opacity: 0;
-}
-
-/* Hide main content initially */
-.hidden {
-    display: none;
-}
-/* INPUT STYLING */
+/* GLASS INPUTS */
 #opening input {
-    width: 260px;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 25px;
-    border: none;
-    outline: none;
+    width: 85%;
+    max-width: 320px;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    color: white;
     font-size: 15px;
+    outline: none;
 }
 
-/* BUTTON GLOW */
+#opening input::placeholder {
+    color: rgba(255,255,255,0.75);
+}
+
+/* HINT */
+.hint {
+    margin-top: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+}
+
+/* BUTTON */
 #opening button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    background: rgba(255,255,255,0.9);
+    color: #ff4d6d;
+    font-size: 16px;
+    cursor: pointer;
     box-shadow: 0 8px 20px rgba(255, 64, 129, 0.4);
     transition: 0.3s;
 }
 
 #opening button:hover {
+    transform: scale(1.05);
     box-shadow: 0 12px 25px rgba(255, 64, 129, 0.6);
+}
+
+/* ERROR */
+#error {
+    margin-top: 10px;
+    color: #ffd6e0;
+    font-weight: 500;
+}
+
+/* FADE & HIDE */
+.fade {
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    #opening h1 {
+        font-size: 1.8em;
+    }
+
+    #opening input {
+        width: 90%;
+    }
 }
 
 /* MAIN CONTENT FADE-IN */
