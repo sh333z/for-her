@@ -7,13 +7,21 @@
 </head>
 <body>
 
-    <!-- OPENING SCREEN -->
-    <div id="opening">
-        <h1>❤️ For Someone Very Special ❤️</h1>
-        <p>You are about to enter my heart</p>
-        <button onclick="openLove()">Tap to Open 💖</button>
-    </div>
+  <!-- PASSWORD SCREEN -->
+<div id="opening">
+    <h1>❤️ Welcome ❤️</h1>
+    <p>Please enter your name and password</p>
 
+    <input type="text" id="name" placeholder="Your name 💕">
+    <input type="password" id="password" placeholder="Password 🔐">
+
+    <p class="hint">Hint: Our special day 💖</p>
+
+    <button onclick="checkAccess()">Enter 💌</button>
+
+    <p id="error"></p>
+</div>
+    
     <!-- MAIN CONTENT -->
     <div id="main" class="container hidden">
 
@@ -52,14 +60,25 @@
     </div>
 
     <script>
-        function openLove() {
+    function checkAccess() {
+        const name = document.getElementById("name").value.toLowerCase();
+        const password = document.getElementById("password").value;
+        const error = document.getElementById("error");
+
+        // CHANGE THESE
+        const correctName = "shif";      // example: anu
+        const correctPassword = "30-09-2021";     // example: date
+
+        if (name === correctName && password === correctPassword) {
             document.getElementById("opening").classList.add("fade");
             setTimeout(() => {
                 document.getElementById("opening").style.display = "none";
                 document.getElementById("main").classList.remove("hidden");
             }, 1000);
+        } else {
+            error.textContent = "Wrong details 💔 Try again";
         }
-    </script>
-
+    }
+</script>
 </body>
 </html>
