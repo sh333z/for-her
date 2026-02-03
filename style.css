@@ -320,3 +320,24 @@ body {
         inset 0 0 6px rgba(255,255,255,0.25),
         0 6px 15px rgba(0,0,0,0.25);
 }
+/* HOME TEXT TYPING EFFECT */
+.type-line {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    margin: 6px auto;
+    font-size: 16px;
+    animation: typingLine 2.5s steps(20, end) forwards;
+}
+
+/* Delay each line */
+.line1 { animation-delay: 0.4s; }
+.line2 { animation-delay: 1.6s; }
+.line3 { animation-delay: 2.8s; }
+.line4 { animation-delay: 4.2s; }
+
+/* Typing keyframes */
+@keyframes typingLine {
+    from { width: 0; }
+    to { width: 22ch; }
+}
