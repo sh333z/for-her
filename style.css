@@ -1,3 +1,16 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: black;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* OPENING SCREEN */
 #opening {
     position: fixed;
@@ -203,11 +216,9 @@
 }
 /* HOME PAGE CARD */
 .home-card {
-    width: 90%;
-    max-width: 360px;
-    height: 85vh;
-    margin: auto;
-    margin-top: 40px;
+    width: 92%;
+    max-width: 380px;
+    height: 100vh;
     border-radius: 28px;
     background: 
         linear-gradient(
@@ -217,7 +228,7 @@
         url("horse.jpg");
     background-size: cover;
     background-position: center;
-    backdrop-filter: blur(6px);
+ 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
