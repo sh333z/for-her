@@ -105,43 +105,7 @@
     }
 }
 
-/* CARDS */
-.card {
-    background: rgba(255, 255, 255, 0.85);
-    color: #444;
-    padding: 25px;
-    border-radius: 20px;
-    margin: 20px auto;
-    max-width: 500px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
 
-.card h2 {
-    color: #ff4081;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: white;
-    opacity: 0.9;
-}
-
-/* FINAL SIGN */
-.sign {
-    margin-top: 10px;
-    font-style: italic;
-    color: #ff4081;
-}
-
-/* MOBILE */
-@media (max-width: 480px) {
-    #opening h1 {
-        font-size: 1.8em;
-    }
-    #opening input {
-        width: 90%;
-    }
-}
 /* MAKE OPENING CONTENT CLOSER */
 #opening h1 {
     margin-bottom: 12px;   /* was too big */
@@ -242,4 +206,75 @@
 .hint span {
     color: #F0C2C2;      /* soft pink */
     font-weight: 500;
+}
+/* HOME PAGE CARD */
+.home-card {
+    width: 90%;
+    max-width: 360px;
+    height: 85vh;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 28px;
+    background: 
+        linear-gradient(
+            rgba(0,0,0,0.25),
+            rgba(0,0,0,0.25)
+        ),
+        url("your-image.jpg");
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* TEXT */
+.home-text {
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    font-family: 'serif';
+}
+
+.home-text p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+.home-text .small {
+    font-size: 15px;
+    opacity: 0.85;
+}
+
+.home-text .highlight {
+    color: #FFD966;
+    font-weight: 600;
+}
+
+/* BUTTONS */
+.home-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.home-buttons .glass-btn {
+    padding: 14px;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.home-buttons .glass-btn:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.03);
 }
