@@ -230,3 +230,16 @@
     from { width: 0; }
     to { width: 14ch; } /* number of characters */
 }
+/* HINT BASE COLOR */
+.hint {
+    color: #000000;      /* black */
+    font-size: 13px;
+    margin-top: 6px;
+    opacity: 0.9;
+}
+
+/* SPECIAL COLOR FOR THE DAY WE FELL IN LOVE */
+.hint span {
+    color: #F0C2C2;      /* soft pink */
+    font-weight: 500;
+}
