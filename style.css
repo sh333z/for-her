@@ -53,20 +53,6 @@
     color: rgba(255,255,255,0.85);
 }
 
-/* BUTTON */
-#opening button {
-    margin-top: 20px;
-    padding: 12px 30px;
-    border-radius: 30px;
-    border: none;
-    background: rgba(255,255,255,0.9);
-    color: #ff4d6d;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(255, 64, 129, 0.4);
-    transition: 0.3s;
-}
-
 #opening button:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 25px rgba(255, 64, 129, 0.6);
@@ -206,12 +192,6 @@
 .glass-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-}
-
-/* HEARTS INSIDE BUTTON */
-.glass-btn .hearts {
-    font-size: 15px;
-    animation: pulse 1.5s infinite;
 }
 
 /* HEART ANIMATION */
