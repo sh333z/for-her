@@ -51,30 +51,31 @@
     <source src="raquel-sergio.mp3" type="audio/mpeg">
 </audio>
     
-    <script>
-    function checkAccess() {
-        const name = document.getElementById("name").value.toLowerCase();
-        const password = document.getElementById("password").value;
-        const error = document.getElementById("error");
+   <script>
+function checkAccess() {
+    const name = document.getElementById("name").value.trim().toLowerCase();
+    const password = document.getElementById("password").value;
+    const error = document.getElementById("error");
 
-        // CHANGE THESE
-        const correctName = "shifa";      // example: anu
-        const correctPassword = "30-09-2021";     // example: date
+    const correctName = "shifa";
+    const correctPassword = "30-09-2021";
 
-        if (name === correctName && password === correctPassword) {
-            document.getElementById("opening").classList.add("fade");
-            setTimeout(() => {
-                document.getElementById("opening").style.display = "none";
-              document.getElementById("main").classList.remove("hidden");
+    if (name === correctName && password === correctPassword) {
+        document.getElementById("opening").classList.add("fade");
 
-const music = document.getElementById("bgMusic");
-music.volume = 0.6;
-music.play();
-            }, 1000);
-        } else {
-            error.textContent = "Wrong details 💔 Try again";
-        }
-      
+        setTimeout(() => {
+            document.getElementById("opening").style.display = "none";
+            document.getElementById("main").classList.remove("hidden");
+
+            const music = document.getElementById("bgMusic");
+            music.volume = 0.4;
+            music.play();
+        }, 1000);
+    } else {
+        error.textContent = "Wrong details 💔 Try again";
+    }
+}
+
 function toggleMusic() {
     const music = document.getElementById("bgMusic");
     const btn = document.getElementById("musicToggle");
