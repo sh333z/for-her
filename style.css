@@ -1,7 +1,16 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 100svh;   /* 👈 iPhone-safe height */
+    background:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("horse.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 /* OPENING SCREEN */
 #opening {
@@ -208,16 +217,9 @@ body {
 }
 /* HOME PAGE CARD */
 .home-card {
-    width: 90%;
-    max-width: 360px;
+    width: 100%;
     min-height: 100svh;
-    margin: auto;
-    border-radius: 28px;
-    background:
-        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-        url("horse.jpg");
-    background-size: cover;
-    background-position: center;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
