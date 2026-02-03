@@ -28,6 +28,9 @@
     
    <!-- MAIN CONTENT -->
 <div id="main" class="hidden">
+
+    <button id="musicToggle" onclick="toggleMusic()">⏸</button>
+    
     <div class="home-card">
         <div class="home-text">
             <p class="small">Babe…</p>
@@ -43,6 +46,11 @@
         </div>
     </div>
 </div>
+    
+    <audio id="bgMusic" loop>
+    <source src="raquel-sergio.mp3" type="audio/mpeg">
+</audio>
+    
     <script>
     function checkAccess() {
         const name = document.getElementById("name").value.toLowerCase();
@@ -57,12 +65,28 @@
             document.getElementById("opening").classList.add("fade");
             setTimeout(() => {
                 document.getElementById("opening").style.display = "none";
-                document.getElementById("main").classList.remove("hidden");
+              document.getElementById("main").classList.remove("hidden");
+
+const music = document.getElementById("bgMusic");
+music.volume = 0.6;
+music.play();
             }, 1000);
         } else {
             error.textContent = "Wrong details 💔 Try again";
         }
+      
+function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicToggle");
+
+    if (music.paused) {
+        music.play();
+        btn.textContent = "⏸";
+    } else {
+        music.pause();
+        btn.textContent = "▶️";
     }
+}
 </script>
 </body>
 </html>
