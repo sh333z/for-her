@@ -179,3 +179,8 @@
     margin-top: 12px;
     padding: 10px 26px;
 }
+/* PLACEHOLDER TEXT COLOR */
+#opening input::placeholder {
+    color: #7F0F0F;
+    opacity: 1; /* important for mobile */
+}
