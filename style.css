@@ -220,20 +220,13 @@
     color: white;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid rgba(255,255,255,0.8);
     width: 0;
     animation:
-        typing 3s steps(14, end) forwards,
-        blink 0.7s step-end infinite;
+        typing 3s steps(14, end) forwards;        
 }
 
 /* Typing effect */
 @keyframes typing {
     from { width: 0; }
     to { width: 14ch; } /* number of characters */
-}
-
-/* Cursor blink */
-@keyframes blink {
-    50% { border-color: transparent; }
 }
