@@ -317,13 +317,11 @@ body {
 }
 /* HOME TEXT TYPING EFFECT */
 .type-line {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    margin: 6px auto;
-    font-size: 16px;
-    animation: typingLine 2.3s steps(20, end) forwards;
+    display: inline-block;
+    clip-path: inset(0 100% 0 0);
+    animation: revealLine 2.2s ease forwards;
 }
+
 
 /* Delay each line */
 .line1 { animation-delay: 0.4s; }
@@ -332,10 +330,11 @@ body {
 .line4 { animation-delay: 4.2s; }
 
 /* Typing keyframes */
-@keyframes typingLine {
-    from { width: 0; }
-    to { width: 100; }
+@keyframes revealLine {
+    from { clip-path: inset(0 100% 0 0); }
+    to   { clip-path: inset(0 0 0 0); }
 }
+
 .back-btn {
     position: fixed;
     top: 18px;
