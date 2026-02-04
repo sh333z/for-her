@@ -322,7 +322,7 @@ body {
     clip-path: inset(0 100% 0 0);
 }
 .type-line.play {
-    animation: revealLine 1.2 ease forwards;
+    animation: revealLine 1.2s ease forwards;
 }
 
 
