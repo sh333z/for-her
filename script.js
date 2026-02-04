@@ -24,11 +24,14 @@ function checkAccess() {
 
 function toggleMusic() {
     const music = document.getElementById("bgMusic");
-    const btn = document.getElementById("musicIcon");
+    const icon = document.getElementById("musicIcon");
 
     if (music.paused) {
-        music.play();
-       icon.src = "pause.png";
+        music.play().then(() => {
+            icon.src = "pause.png";
+        }).catch(() => {
+            console.log("User interaction required");
+        });
     } else {
         music.pause();
         icon.src = "play.png";
