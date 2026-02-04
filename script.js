@@ -13,8 +13,9 @@ function checkAccess() {
             document.getElementById("opening").style.display = "none";
             document.getElementById("main").classList.remove("hidden");
 
-            restartTyping();
-
+setTimeout(() => {
+    restartTyping();
+}, 200);
             const music = document.getElementById("bgMusic");
             music.volume = 0.2;
             music.play();
@@ -44,10 +45,10 @@ function restartTyping() {
 
     lines.forEach((line, index) => {
         line.style.animation = 'none';
-        line.offsetHeight; // force reflow (Safari fix)
+        line.style.clipPath = 'inset(0 100% 0 0)';
+        line.offsetHeight; // force reflow
 
-        line.style.animation =
-            `revealLine 2.2s ease forwards`;
+        line.style.animation = `revealLine 2.2s ease forwards`;
         line.style.animationDelay = `${index * 1.2}s`;
     });
 }
