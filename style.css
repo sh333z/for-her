@@ -72,13 +72,6 @@ body {
     color: rgba(255,255,255,0.85);
 }
 
-/* HINT */
-.hint {
-    margin-top: 10px;
-    font-size: 13px;
-    color: rgba(255,255,255,0.85);
-}
-
 #opening button:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 25px rgba(255, 64, 129, 0.6);
@@ -140,12 +133,6 @@ body {
 
 #opening input {
     margin: 8px 0;         /* reduce vertical gap */
-}
-
-.hint {
-    margin-top: 6px;
-    margin-bottom: 8px;
-    font-size: 12px;
 }
 
 #opening button {
@@ -327,7 +314,7 @@ body {
     width: 0;
     margin: 6px auto;
     font-size: 16px;
-    animation: typingLine 2.5s steps(20, end) forwards;
+    animation: typingLine 2.3s steps(20, end) forwards;
 }
 
 /* Delay each line */
@@ -339,47 +326,37 @@ body {
 /* Typing keyframes */
 @keyframes typingLine {
     from { width: 0; }
-    to { width: 22ch; }
+    to { width: 100; }
 }
-/* SMOOTH PAGES */
-.page {
-    position: fixed;
-    inset: 0;
-    padding: 40px 20px;
-    text-align: center;
-
-    background: rgba(0,0,0,0.25);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-
-    color: white;
-    transform: translateX(100%);
-    transition: transform 0.6s ease, opacity 0.6s ease;
-    opacity: 0;
-    z-index: 15;
-}
-
-.page.show {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.hidden-page {
-    pointer-events: none;
-}
-
-/* BACK BUTTON */
 .back-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-
+    position: fixed;
+    top: 18px;
+    left: 18px;
     background: rgba(255,255,255,0.15);
     border: 1px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(6px);
     color: white;
-
+    font-size: 18px;
     padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 16px;
+    border-radius: 50%;
     cursor: pointer;
+}
+
+.story-container {
+    padding: 80px 24px;
+    text-align: center;
+    font-family: 'Oooh Baby', cursive;
+    color: white;
+}
+
+.story-line {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.randoms-box {
+    padding: 90px 24px;
+    color: white;
+    font-size: 18px;
+    line-height: 1.8;
 }
