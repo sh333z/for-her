@@ -370,3 +370,14 @@ body {
     font-size: 18px;
     line-height: 1.8;
 }
+@media (max-width: 480px) {
+    .home-text {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .home-text p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
