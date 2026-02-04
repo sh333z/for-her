@@ -3,7 +3,7 @@ function checkAccess() {
     const password = document.getElementById("password").value.trim();
     const error = document.getElementById("error");
 
-    const correctName = "Shifa";
+    const correctName = "shifa";
     const correctPassword = "30-09-2021";
 
     if (name === correctName && password === correctPassword) {
