@@ -290,30 +290,20 @@ body {
 }
 #musicToggle {
     position: fixed;
-    top: 20px;
-    right: 18px;
-    z-index: 20;
-
-    width: 42px;
-    height: 42px;
+    top: 30px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
     border-radius: 50%;
-
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-
-    border: 1px solid rgba(255,255,255,0.35);
-    color: white;
-    font-size: 16px;
+    padding: 12px;
+    backdrop-filter: blur(8px);
     cursor: pointer;
+    z-index: 10;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow:
-        inset 0 0 6px rgba(255,255,255,0.25),
-        0 6px 15px rgba(0,0,0,0.25);
+#musicToggle img {
+    width: 26px;
+    height: 26px;
 }
 /* HOME TEXT TYPING EFFECT */
 .type-line {
