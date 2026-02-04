@@ -5,6 +5,7 @@ html, body {
 }
 *, *::before, *::after {
     box-sizing: inherit;
+}
 body {
     min-height: 100svh;
     margin: 0;
@@ -319,8 +320,6 @@ body {
 .type-line {
     display: inline-block;
     clip-path: inset(0 100% 0 0);
-    animation: revealLine 2.2s ease forwards;
-    animation-fill-mode: forwards;
 }
 
 
