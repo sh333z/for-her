@@ -320,6 +320,7 @@ body {
     display: inline-block;
     clip-path: inset(0 100% 0 0);
     animation: revealLine 2.2s ease forwards;
+    animation-fill-mode: forwards;
 }
 
 
