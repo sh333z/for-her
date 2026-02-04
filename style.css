@@ -305,10 +305,10 @@ body {
 }
 
 #musicToggle img {
-    width: 38px;   /* adjust if you want */
-    height: 38px;
+    width: 24px;   /* adjust if you want */
+    height: 24px;
 
-    opacity: 0.85;
+    opacity: 0.75;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
