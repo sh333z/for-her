@@ -152,9 +152,9 @@ body {
     border-radius: 30px;
 
     /* CLEAR GLASS */
-    background: rgba(255, 255, 255, 0.04);   /* 👈 more transparent */
-    backdrop-filter: blur(4px);              /* 👈 softer blur */
-    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.02);   /* 👈 more transparent */
+    backdrop-filter: blur(1px);              /* 👈 softer blur */
+    -webkit-backdrop-filter: blur(1px);
 
     border: 1px solid rgba(255, 255, 255, 0.45);
 
@@ -166,7 +166,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 5px;
 
     box-shadow:
         inset 0 0 8px rgba(255,255,255,0.35),
@@ -290,20 +290,28 @@ body {
 }
 #musicToggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.15);
+    top: 18px;
+    right: 18px;
+    z-index: 20;
+
+    background: transparent;
     border: none;
-    border-radius: 50%;
-    padding: 12px;
-    backdrop-filter: blur(8px);
+    padding: 0;
+
     cursor: pointer;
-    z-index: 10;
 }
 
 #musicToggle img {
-    width: 26px;
-    height: 26px;
+    width: 38px;   /* adjust if you want */
+    height: 38px;
+
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#musicToggle img:hover {
+    transform: scale(1.1);
+    opacity: 1;
 }
 /* HOME TEXT TYPING EFFECT */
 .type-line {
