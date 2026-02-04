@@ -352,18 +352,6 @@ body {
     cursor: pointer;
 }
 
-.story-container {
-    padding: 80px 24px;
-    text-align: center;
-    font-family: 'Oooh Baby', cursive;
-    color: white;
-}
-
-.story-line {
-    font-size: 22px;
-    margin: 20px 0;
-}
-
 .randoms-box {
     padding: 90px 24px;
     color: white;
@@ -379,5 +367,38 @@ body {
     .home-text p {
         font-size: 15px;
         line-height: 1.6;
+    }
+}
+.story-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 100px 24px 60px;
+    font-family: 'Oooh Baby', cursive;
+    color: white;
+    line-height: 1.8;
+}
+
+.story-line {
+    font-size: 22px;
+    margin: 32px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.2s ease;
+}
+
+.story-line.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.story-line.highlight {
+    color: #FFD1DC;
+    text-align: center;
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .story-line {
+        font-size: 20px;
     }
 }
