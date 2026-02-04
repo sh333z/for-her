@@ -1,6 +1,6 @@
 function checkAccess() {
     const name = document.getElementById("name").value.trim().toLowerCase();
-    const password = document.getElementById("password").value;
+    const password = document.getElementById("password").value.trim();
     const error = document.getElementById("error");
 
     const correctName = "Shifa";
