@@ -42,9 +42,12 @@ function toggleMusic() {
 function restartTyping() {
     const lines = document.querySelectorAll('.type-line');
 
-    lines.forEach(line => {
+    lines.forEach((line, index) => {
         line.style.animation = 'none';
-        line.offsetHeight; // force reflow
-        line.style.animation = '';
+        line.offsetHeight; // force reflow (Safari fix)
+
+        line.style.animation =
+            `revealLine 2.2s ease forwards`;
+        line.style.animationDelay = `${index * 1.2}s`;
     });
 }
