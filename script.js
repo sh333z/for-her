@@ -43,12 +43,9 @@ function toggleMusic() {
 function restartTyping() {
     const lines = document.querySelectorAll('.type-line');
 
-    lines.forEach((line, index) => {
-        line.style.animation = 'none';
-        line.style.clipPath = 'inset(0 100% 0 0)';
-        line.offsetHeight; // force reflow
-
-        line.style.animation = `revealLine 2.2s ease forwards`;
-        line.style.animationDelay = `${index * 1.2}s`;
+    lines.forEach(line => {
+        line.classList.remove('play');
+        void line.offsetWidth; // force reflow
+        line.classList.add('play');
     });
 }
