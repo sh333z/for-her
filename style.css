@@ -321,6 +321,9 @@ body {
     display: inline-block;
     clip-path: inset(0 100% 0 0);
 }
+.type-line.play {
+    animation: revealLine 1.2 ease forwards;
+}
 
 
 /* Delay each line */
