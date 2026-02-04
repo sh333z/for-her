@@ -34,3 +34,24 @@ function toggleMusic() {
         btn.textContent = "▶️";
     }
 }
+function openPage(pageId) {
+    document.querySelector(".home-card").style.display = "none";
+
+    const page = document.getElementById(pageId);
+    page.classList.remove("hidden-page");
+
+    setTimeout(() => {
+        page.classList.add("show");
+    }, 10);
+}
+
+function goHome() {
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("show");
+        page.classList.add("hidden-page");
+    });
+
+    setTimeout(() => {
+        document.querySelector(".home-card").style.display = "flex";
+    }, 600);
+}
