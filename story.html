@@ -89,7 +89,17 @@
     <p class="story-line highlight">We didn’t have a perfect story—<br>
     we had a real one.</p>
 </div>
+    <script>
+document.addEventListener("scroll", () => {
+    const lines = document.querySelectorAll(".story-line");
 
-<script src="story.js"></script>
+    lines.forEach(line => {
+        const rect = line.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 80) {
+            line.classList.add("show");
+        }
+    });
+});
+</script>
 </body>
 </html>
