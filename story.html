@@ -89,8 +89,8 @@
     <p class="story-line highlight">We didn’t have a perfect story—<br>
     we had a real one.</p>
 </div>
-    <script>
-document.addEventListener("scroll", () => {
+   <script>
+function revealLines() {
     const lines = document.querySelectorAll(".story-line");
 
     lines.forEach(line => {
@@ -99,7 +99,13 @@ document.addEventListener("scroll", () => {
             line.classList.add("show");
         }
     });
-});
+}
+
+// run once when page loads
+document.addEventListener("DOMContentLoaded", revealLines);
+
+// run on scroll
+document.addEventListener("scroll", revealLines);
 </script>
 </body>
 </html>
