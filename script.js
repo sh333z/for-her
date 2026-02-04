@@ -13,6 +13,8 @@ function checkAccess() {
             document.getElementById("opening").style.display = "none";
             document.getElementById("main").classList.remove("hidden");
 
+            restartTyping();
+
             const music = document.getElementById("bgMusic");
             music.volume = 0.2;
             music.play();
@@ -36,4 +38,13 @@ function toggleMusic() {
         music.pause();
         icon.src = "play.png";
     }
+}
+function restartTyping() {
+    const lines = document.querySelectorAll('.type-line');
+
+    lines.forEach(line => {
+        line.style.animation = 'none';
+        line.offsetHeight; // force reflow
+        line.style.animation = '';
+    });
 }
