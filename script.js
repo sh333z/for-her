@@ -24,13 +24,13 @@ function checkAccess() {
 
 function toggleMusic() {
     const music = document.getElementById("bgMusic");
-    const btn = document.getElementById("musicToggle");
+    const btn = document.getElementById("musicIcon");
 
     if (music.paused) {
         music.play();
-        btn.textContent = "⏸";
+       icon.src = "pause.png";
     } else {
         music.pause();
-        btn.textContent = "▶️";
+        icon.src = "play.png";
     }
 }
