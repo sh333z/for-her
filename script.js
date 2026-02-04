@@ -3,7 +3,7 @@ function checkAccess() {
     const password = document.getElementById("password").value;
     const error = document.getElementById("error");
 
-    const correctName = "shifa";
+    const correctName = "Shifa";
     const correctPassword = "30-09-2021";
 
     if (name === correctName && password === correctPassword) {
@@ -33,25 +33,4 @@ function toggleMusic() {
         music.pause();
         btn.textContent = "▶️";
     }
-}
-function openPage(pageId) {
-    document.querySelector(".home-card").style.display = "none";
-
-    const page = document.getElementById(pageId);
-    page.classList.remove("hidden-page");
-
-    setTimeout(() => {
-        page.classList.add("show");
-    }, 10);
-}
-
-function goHome() {
-    document.querySelectorAll(".page").forEach(page => {
-        page.classList.remove("show");
-        page.classList.add("hidden-page");
-    });
-
-    setTimeout(() => {
-        document.querySelector(".home-card").style.display = "flex";
-    }, 600);
 }
