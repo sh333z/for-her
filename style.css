@@ -381,15 +381,9 @@ body {
 .story-line {
     font-size: 22px;
     margin: 32px 0;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 1.2s ease;
-}
-
-.story-line.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+    color: white;
+    line-height: 1.8;
+}    
 
 .story-line.highlight {
     color: #FFD1DC;
