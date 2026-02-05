@@ -89,23 +89,5 @@
     <p class="story-line highlight">We didn’t have a perfect story—<br>
     we had a real one.</p>
 </div>
-<script>
-function revealStoryLines() {
-    const lines = document.querySelectorAll(".story-line");
-
-    lines.forEach(line => {
-        const rect = line.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 80) {
-            line.classList.add("show");
-        }
-    });
-}
-
-/* Run on scroll */
-document.addEventListener("scroll", revealStoryLines);
-
-/* Run once on page load */
-window.addEventListener("load", revealStoryLines);
-</script>
 </body>
 </html>
