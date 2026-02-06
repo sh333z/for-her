@@ -396,3 +396,28 @@ body {
         font-size: 20px;
     }
 }
+.playlist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.playlist button {
+    padding: 14px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+}
+
+.playlist button:hover {
+    background: rgba(255,255,255,0.22);
+}
+audio {
+    width: 100%;
+    margin-top: 30px;
+}
